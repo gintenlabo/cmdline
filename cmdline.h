@@ -813,6 +813,10 @@ private:
   std::vector<std::string> others;
 
   std::vector<std::string> errors;
+
+  // noncopyable; use =delete; if you use C++11 or later
+  parser(const parser &x);
+  void operator=(const parser &x);
 };
 
 } // cmdline
